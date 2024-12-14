@@ -8,7 +8,7 @@ Welcome to my first project! This repository demonstrates a **modular machine le
 ## Features
 
 - **Modular Design**: Each stage of the ML process (data ingestion, training, evaluation) is encapsulated in its own module.
-- **Hyperparameter Tuning**: Easily configure and experiment with hyperparameters via YAML files.
+- **Hyperparameter Tuning**: Easily configure and experiment with hyperparameters.
 - **Custom Exception Handling**: Robust error management ensures smooth execution and helpful debugging.
 - **Automation**: Everything is triggered through the `data_injection.py` file, which acts as the entry point.
 
@@ -18,12 +18,12 @@ Welcome to my first project! This repository demonstrates a **modular machine le
 
 ```
 project_root/
-|-- data_injection.py     # Main entry point to trigger the pipeline
-|-- modules/
-|   |-- data_ingestion.py   # Handles data loading and preprocessing
-|   |-- model_trainer.py    # Trains machine learning models
-|   |-- model_evaluation.py # Evaluates model performance
-|-- utils/
+|-- src
+| |- components/
+|   |-- data_ingestion_reading.py   # Handles data loading and preprocessing
+|   |-- data_transformation.py    # Trains machine learning models
+|   |-- model_training.py # Evaluates model performance
+|   |- utils/
 |   |-- exception.py        # Custom exception handling
 |   |-- logger.py           # Logging utility
 |-- artifacts/             # Stores processed data and model artifacts
@@ -64,4 +64,4 @@ project_root/
 - Custom `Exception` class ensures meaningful error messages for smooth debugging.
 
 ---
-##This is just my first try to making a modular project to run a machine learning model. This seved as my reference for other projects. 
+### This is just my first try to making a modular project to run a machine learning model. This served as my reference for other projects. Here I revised python, solved issues of imports and applying python exports, learned about creating artifacts to store model (though not commited here).
