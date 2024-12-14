@@ -23,50 +23,22 @@ project_root/
 |   |-- data_ingestion.py   # Handles data loading and preprocessing
 |   |-- model_trainer.py    # Trains machine learning models
 |   |-- model_evaluation.py # Evaluates model performance
-|-- config/
-|   |-- params.yaml         # YAML file for hyperparameter configuration
 |-- utils/
 |   |-- exception.py        # Custom exception handling
 |   |-- logger.py           # Logging utility
 |-- artifacts/             # Stores processed data and model artifacts
 ```
 
----
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed:
-- Python 3.8 or higher
-- Required Python libraries listed in `requirements.txt`
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/modular-ml-pipeline.git
-   cd modular-ml-pipeline
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Update `params.yaml` to specify the hyperparameters for your experiment.
-
----
-
 ## Usage
 
 1. **Trigger the pipeline**:
-   Run the `data_injection.py` file to start the pipeline:
+   Run the `data_injection_reading.py` file to start the pipeline:
    ```bash
    python data_injection.py
    ```
 
 2. **Modify Hyperparameters**:
-   Adjust settings in `config/params.yaml` to fine-tune the model.
+   Modify the Search_space Parameter in model_trainer.py
 
 3. **Logs and Artifacts**:
    - Logs are stored in the `logs/` folder for debugging and tracking.
@@ -92,36 +64,4 @@ Ensure you have the following installed:
 - Custom `Exception` class ensures meaningful error messages for smooth debugging.
 
 ---
-
-## Configuration
-
-Edit the `config/params.yaml` file to customize the pipeline. Example:
-
-```yaml
-model:
-  type: RandomForest
-  hyperparameters:
-    n_estimators: 100
-    max_depth: 10
-    random_state: 42
-```
-
----
-
-## Contributing
-
-If you have suggestions or improvements, feel free to submit a pull request or open an issue. This is my first project, and I’m excited to learn from your feedback!
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-## Acknowledgments
-
-- **Python Community**: For amazing libraries like NumPy, Pandas, and Scikit-learn.
-- **You**: For checking out my first project!
-
+##This is just my first try to making a modular project to run a machine learning model. This seved as my reference for other projects. 
